@@ -40,3 +40,12 @@ if (true) {
   console.log(a);
   var a = 2; // 이 경우, 선언과 할당이 동시에 이루어지기 때문에 콘솔에 undefined가 찍힌다
 }
+
+function d() {
+  return 1;
+}
+
+const d_ES6 = () => 1;
+
+console.log(d());
+console.log(d_ES6());
