@@ -45,7 +45,32 @@ function d() {
   return 1;
 }
 
+/** 화살표 함수*/
 const d_ES6 = () => 1;
 
 console.log(d());
 console.log(d_ES6());
+
+/** 기본 매개변수 */
+const e = (g = 2) => {
+  return g;
+};
+
+console.log(e());
+
+/**생성자 함수와 화살표 함수 */
+function arrow() {
+  setTimeout(() => {
+    console.log(this);
+  }, 1000);
+}
+
+function not_arrow() {
+  setTimeout(function () {
+    console.log(this);
+  }, 1000);
+}
+
+const p1 = new not_arrow();
+const p2 = new arrow();
+// 일단 생성을 해놨으니, 코드가 돌아가서 자동으로 위에 콘솔로 찍기로 했던 this들이 나옴
